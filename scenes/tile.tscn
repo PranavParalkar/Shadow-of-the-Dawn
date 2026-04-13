@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd86inq5m34ba"]
+
+[ext_resource type="Texture2D" uid="uid://f1yqrxhi76yf" path="res://assests/sprites/Platform tiles.png" id="1_3dk36"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ywnoi"]
+texture = ExtResource("1_3dk36")
+3:3/size_in_atlas = Vector2i(6, 2)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-49, -15, 48, -16, 48, 16, -48, 16)
+3:6/size_in_atlas = Vector2i(6, 2)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-49, -15, 48, -16, 48, 16, -48, 16)
+
+[sub_resource type="TileSet" id="TileSet_jy7pm"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ywnoi")
+
+[node name="Tile" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_jy7pm")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1245181, 196608, 3, -917492, 196608, 3, -1703913, 196608, 3, -1310703, 196608, 3, -1310685, 196608, 3, -655333, 196608, 3, -786386, 196608, 3, -1507280, 196608, 3, -1769432, 196608, 3, -1179590, 196608, 3)
